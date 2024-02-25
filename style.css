@@ -1,0 +1,162 @@
+/* base rule */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1Rem = 10px */
+    width: 100%;
+    height: 100%;
+    font-family: "Urbanist", sans-serif;
+    background-image: linear-gradient(
+  40deg,
+  hsl(214deg 11% 12%) 0%,
+  hsl(215deg 9% 14%) 11%,
+  hsl(215deg 7% 15%) 22%,
+  hsl(215deg 6% 17%) 33%,
+  hsl(215deg 4% 18%) 44%,
+  hsl(215deg 3% 19%) 56%,
+  hsl(215deg 2% 21%) 67%,
+  hsl(215deg 1% 22%) 78%,
+  hsl(216deg 1% 24%) 89%,
+  hsl(0deg 0% 25%) 100%
+);
+}
+
+a{
+    text-decoration: none;
+    color: #E1EAF3;
+}
+
+
+
+/* module rule */
+
+button{
+    display: block;
+    width: 5.2rem ;
+    height: 5.2rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: none;
+    background-color: #292F37;
+    box-shadow:#4A5057 0px 5px 15px;
+    color: #E1EAF3;
+    font-size: 1.8rem;
+    
+}
+
+.green-color{
+    color: #57a434;
+}
+
+.bg-color{
+    background-color: #C36519;
+}
+
+/* layout rule */
+
+.grid{
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+}
+
+.grid-four-column{
+    grid-template-columns: repeat(4,1fr);
+}
+
+/* state rule */
+
+button:hover{
+    background-color: rgba(28, 29, 30, 0.4);
+}
+button:active > a{
+    color:#C36519;
+}
+
+/* start-section-calculator-body */
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cal-body{
+    width: 27%;
+    border: 0.1rem solid rgba(186, 184, 184,0.6);
+    padding-top: 13rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    box-shadow:#4A5057 0px 5px 15px;
+    border-radius: 1.4rem;
+    -webkit-border-radius: 1.4rem;
+    -moz-border-radius: 1.4rem;
+    -ms-border-radius: 1.4rem;
+    -o-border-radius: 1.4rem;
+}
+/* End-section-calculator-body */
+
+
+/* media-query-Start */
+@media (width < 1200px){
+    html{
+        font-size: 56.5%;
+    }
+
+    .cal-body{
+        width: 30%;
+    }
+}
+
+@media (width < 999px){
+    html{
+        font-size: 54.5%;
+    }
+
+    .cal-body{
+        width: 33%;
+    }
+}
+
+@media (width < 875px){
+    html{
+        font-size: 52.5%;
+    }
+
+    .cal-body{
+        width: 35%;
+    }
+}
+
+@media (width < 769px){
+    .cal-body{
+        width: 45%;
+    }
+}
+
+@media (width < 600px){
+
+    .cal-body{
+        width: 70%;
+    }
+}
+
+@media (width < 427px){
+    html{
+        font-size: 50.5%;
+    }
+
+    .cal-body{
+        width: 85%;
+    }
+}
+/* media-query-End */
